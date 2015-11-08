@@ -1,0 +1,60 @@
+%---Allgemein---%
+\newcommand{\note}[1]{\hrule \subsubsection*{Notizen}#1\hrule}
+
+%---Deckblatt---%
+\newcommand{\myauthor}{Steffen Holzer}
+\newcommand{\mytitle}{}
+\newcommand{\subtitle}{}
+\newcommand{\dozent}{}
+\newcommand{\semester}{}
+\newcommand{\logo}{}
+
+
+\newenvironment{notiz}{\hrule\subsubsection*{Notizen}\begin{description}}{\end{description}\hrule}
+
+%---Ref---%
+\newcommand{\fullref}[1]{\emph{\ref{#1} \nameref{#1}}}
+
+%---Bib---%
+\newcommand{\footcite}[2]{\footnote{\cite[#2]{#1}}}
+
+%---Seminare---%
+\newcommand{\sitzung}[1]{\subsection{Sitzung vom #1}}
+\newcommand{\aufgaben}[2]{\subsection{Aufgaben vom #1 -- #2}}
+
+\newcounter{Aufgabe}
+\newenvironment{aufgabe}[1]{\begin{description}
+\stepcounter{Aufgabe}
+\item[Aufgabe \theAufgabe : ]#1\hfill\\}
+{\end{description}}
+
+\newenvironment{aufgabe*}[1]{\begin{description}
+\item[Aufgabe :]#1\hfill\\}
+{\end{description}}
+
+\newcounter{Definition}
+\newenvironment{definition}[1]{\begin{description}
+\stepcounter{Definition}
+\item[Definition \theDefinition :]#1\hfill\\}
+{\end{description}}
+
+\newenvironment{definition*}[1]{\begin{description}
+\item[Definition  :]#1\hfill\\}
+{\end{description}}
+
+\newcounter{Satz}
+\newenvironment{satz}[1]{\begin{description}
+\stepcounter{Satz}
+\item[Satz \theSatz :]#1\hfill\\}
+{\end{description}}
+
+\newenvironment{satz*}[1]{\begin{description}
+\item[Satz :]#1\hfill\\}
+{\end{description}}
+
+\newcommand{\degr}{^{\circ}}
+
+%---Tabular---%
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}

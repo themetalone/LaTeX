@@ -1,0 +1,27 @@
+\input{../../kopf} %TODO Erstzen durch einen passenden Pfad
+\input{../../commands}
+
+\usepackage{xcolor}
+\geometry{margin=2cm}
+
+%\newcommand{\einsetzen}[1]{\textcolor{white}{#1}} %TODO Schüler
+\newcommand{\einsetzen}[1]{\textcolor{gray}{#1}} %TODO Lehrer
+
+\newcommand{\wait}{\hrule
+\begin{center}
+\textbf{--Hier warten bis alle fertig sind!--}
+\end{center}
+\hrule}
+
+\renewcommand{\mytitle}{Thema des Blattes} %TODO
+\newcommand{\mysubject}{Themenkomplex} %TODO
+
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+\begin{tabular}{|L{0.2\textwidth}|C{0.5\textwidth}|R{0.2\textwidth}|}
+\hline
+TT.MM.JJJJ&\mytitle&\mysubject\\
+\hline
+\end{tabular}
+
+\end{document}
